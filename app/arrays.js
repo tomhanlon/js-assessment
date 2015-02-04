@@ -30,9 +30,10 @@ define(function() {
 
     removeWithoutCopy: function(arr, item) {
       var length = arr.length;
-      for (var i = 0; i < length; i++) {
+      // Iterate over array backwards
+      for (var i = length; i >= 0; i--) {
         if (arr[i] === item) {
-          arr.splice(i, item);
+          arr.splice(i, 1);
         }
       }
       return arr;
